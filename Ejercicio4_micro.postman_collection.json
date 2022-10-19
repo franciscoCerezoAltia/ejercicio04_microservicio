@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "1ef63976-bf50-4a3d-997c-7301bb0878a7",
+		"name": "Ejercicio4_micro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PedirCursos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/curso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"curso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PedirCurso",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/curso/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"curso",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PedirCursoPrecio",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/curso?precio1=1&precio2=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"curso"
+					],
+					"query": [
+						{
+							"key": "precio1",
+							"value": "1"
+						},
+						{
+							"key": "precio2",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AltaCurso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codCurso\": \"100\",\r\n    \"nombre\": \"Html 5\",\r\n    \"duracion\": 20,\r\n    \"precio\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/curso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"curso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarDuracionCurso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codCurso\": \"100\",\r\n    \"nombre\": \"Html 5\",\r\n    \"duracion\": 20,\r\n    \"precio\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/curso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"curso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarCurso",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/curso/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"curso",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "swagger-ui",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
